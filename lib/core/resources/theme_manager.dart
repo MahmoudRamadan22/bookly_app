@@ -20,10 +20,17 @@ ThemeData getApplicationTheme() {
     ),
     // app bar theme
     appBarTheme: AppBarTheme(
-      centerTitle: true,
-      titleTextStyle: getRegularStyle(
+      // actionsPadding: EdgeInsets.only(
+      //   left: AppPadding.p12,
+      //   top: AppPadding.p12,
+      //   right: AppPadding.p16,
+      //   bottom: AppPadding.p12,
+      // ),
+      backgroundColor: ColorManager.primary,
+      centerTitle: false,
+      titleTextStyle: getBoldStyle(
         color: ColorManager.white,
-        fontSize: AppSize.s16,
+        fontSize: AppSize.s20,
       ),
     ),
     //button theme
@@ -41,7 +48,7 @@ ThemeData getApplicationTheme() {
       ),
       headlineLarge: getRegularStyle(
         color: ColorManager.white,
-        fontSize: AppSize.s14,
+        fontSize: AppSize.s24,
       ),
       headlineSmall: getBoldStyle(
         color: ColorManager.white,
@@ -54,6 +61,22 @@ ThemeData getApplicationTheme() {
       bodySmall: getLightStyle(
         color: ColorManager.white,
         fontSize: AppSize.s12,
+      ),
+    ),
+    // icon button theme
+    iconButtonTheme: IconButtonThemeData(
+      style: ButtonStyle(
+        padding: WidgetStatePropertyAll(
+          EdgeInsets.only(
+            top: AppPadding.p16,
+            left: AppPadding.p16,
+            bottom: AppPadding.p16,
+            right: AppPadding.p20,
+          ),
+        ),
+        overlayColor: WidgetStatePropertyAll(ColorManager.lightPrimary),
+        iconColor: WidgetStatePropertyAll(ColorManager.white),
+        iconSize: WidgetStatePropertyAll(AppSize.s32),
       ),
     ),
   );

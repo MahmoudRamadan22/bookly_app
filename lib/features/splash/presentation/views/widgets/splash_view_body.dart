@@ -19,43 +19,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
   Timer? _timer;
   late AnimationController _controller;
   late Animation<Offset> _slidingAnimation;
-  void delay() {
-    _timer = Timer(Duration(seconds: 3), _goNext);
-  }
-
-  void _goNext() {
-    // Navigator.pushReplacementNamed(context, Routes.homeRoute);
-    Navigator.push(
-      context,
-      PageRouteBuilder(
-        pageBuilder: (context, animation, secondaryAnimation) => HomeView(),
-        transitionDuration: Duration(milliseconds: 200),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          const begin = Offset(1.0, 0.0); // يبدأ من يمين الشاشة
-          const end = Offset.zero; // ينتهي في مكانه الطبيعي
-          const curve = Curves.easeInOut;
-          final tween = Tween(
-            begin: begin,
-            end: end,
-          ).chain(CurveTween(curve: curve));
-          final offsetAnimation = animation.drive(tween);
-          return SlideTransition(position: offsetAnimation, child: child);
-        },
-      ),
-    );
-  }
-
-  void animatedText() {
-    _controller = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: 2),
-    );
-    _slidingAnimation = Tween<Offset>(
-      begin: Offset(0, 1),
-      end: Offset(0, 0),
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
-    _controller.forward();
-  }
 
   @override
   void initState() {
@@ -104,6 +67,44 @@ class _SplashViewBodyState extends State<SplashViewBody>
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  void delay() {
+    _timer = Timer(Duration(seconds: 3), _goNext);
+  }
+
+  void animatedText() {
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 2),
+    );
+    _slidingAnimation = Tween<Offset>(
+      begin: Offset(0, 1),
+      end: Offset(0, 0),
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
+    _controller.forward();
+  }
+
+  void _goNext() {
+    // Navigator.pushReplacementNamed(context, Routes.homeRoute);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => HomeView(),
+        transitionDuration: Duration(milliseconds: 200),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          const begin = Offset(1.0, 0.0); // يبدأ من يمين الشاشة
+          const end = Offset.zero; // ينتهي في مكانه الطبيعي
+          const curve = Curves.easeInOut;
+          final tween = Tween(
+            begin: begin,
+            end: end,
+          ).chain(CurveTween(curve: curve));
+          final offsetAnimation = animation.drive(tween);
+          return SlideTransition(position: offsetAnimation, child: child);
+        },
       ),
     );
   }
