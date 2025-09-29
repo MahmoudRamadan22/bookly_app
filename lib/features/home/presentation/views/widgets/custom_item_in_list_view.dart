@@ -10,8 +10,6 @@ class CustomItemInListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height:
-          MediaQuery.of(context).size.height * AppConstants.percentageOfHeight,
       child: AspectRatio(
         aspectRatio: AppConstants.aspectRatio,
         child: Container(
