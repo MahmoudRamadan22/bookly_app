@@ -93,7 +93,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       context,
       PageRouteBuilder(
         pageBuilder: (context, animation, secondaryAnimation) => HomeView(),
-        transitionDuration: Duration(milliseconds: 200),
+        transitionDuration: Duration(milliseconds: 600),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           const begin = Offset(1.0, 0.0); // يبدأ من يمين الشاشة
           const end = Offset.zero; // ينتهي في مكانه الطبيعي

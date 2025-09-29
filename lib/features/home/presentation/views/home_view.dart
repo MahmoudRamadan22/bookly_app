@@ -1,3 +1,4 @@
+import 'package:bookly/core/resources/values_manager.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/home_body_view.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,12 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: CustomAppBar().getAppBar(), body: HomeBodyView());
+    return Scaffold(
+      appBar: CustomAppBar().getAppBar(),
+      body: Padding(
+        padding: const EdgeInsets.only(top: AppPadding.p8),
+        child: HomeBodyView(),
+      ),
+    );
   }
 }
