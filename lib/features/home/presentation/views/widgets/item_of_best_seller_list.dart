@@ -16,7 +16,7 @@ class ItemOfBestSellerList extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * .23,
+            height: MediaQuery.of(context).size.height * .18,
             child: AspectRatio(
               aspectRatio: AppConstants.aspectRatio,
               child: Container(
@@ -39,15 +39,16 @@ class ItemOfBestSellerList extends StatelessWidget {
                 Text(
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  "تأملاتتأملاتتأملاتتأملاتتأملاتتأملاتتأملاتتأملاتتأملاتتأملاتتأملاتتأملات يومية",
+                  "يومية",
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 Text(
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  "تأملاتتأملاتتأملاتتأملاتتأملاتتأملات يومية",
+                  " يومية",
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
+                SizedBox(height: 30),
                 Row(
                   children: [
                     Text(

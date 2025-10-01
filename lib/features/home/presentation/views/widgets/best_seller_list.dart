@@ -6,13 +6,12 @@ class BestSellerList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        scrollDirection: Axis.vertical,
-        itemBuilder: (context, index) => ItemOfBestSellerList(),
-        itemCount: 3,
-        physics: BouncingScrollPhysics(),
-      ),
+    return ListView.builder(
+      shrinkWrap: true,
+      scrollDirection: Axis.vertical,
+      itemBuilder: (context, index) => ItemOfBestSellerList(),
+      itemCount: 20,
+      physics: NeverScrollableScrollPhysics(),
     );
   }
 }
