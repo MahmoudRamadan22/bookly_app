@@ -54,13 +54,17 @@ ThemeData getApplicationTheme() {
         color: ColorManager.white,
         fontSize: FontSize.s22 * 1.3,
       ),
+      headlineMedium: getBoldStyle(
+        color: ColorManager.white,
+        fontSize: FontSize.s22,
+      ),
       titleLarge: getRegularStyle(
         color: ColorManager.white,
         fontSize: AppSize.s14,
       ),
       bodySmall: getLightStyle(
-        color: ColorManager.white,
-        fontSize: AppSize.s12,
+        color: ColorManager.lightGrey,
+        fontSize: FontSize.s22,
       ),
     ),
     // icon button theme

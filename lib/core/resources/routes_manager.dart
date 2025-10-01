@@ -4,7 +4,6 @@ import 'package:bookly/core/resources/strings_manager.dart';
 import 'package:bookly/features/home/presentation/views/home_view.dart';
 import 'package:bookly/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Routes {
   static const String splashRoute = '/';
