@@ -20,4 +20,20 @@ class CustomAppBar {
       ],
     );
   }
+
+  AppBar customAppBarForDetailsBookView() {
+    return AppBar(
+      actionsPadding: EdgeInsets.all(AppPadding.p10),
+      leading: Padding(
+        padding: const EdgeInsets.all(AppPadding.p10),
+        child: IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+      ),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.shopping_cart_checkout_rounded),
+        ),
+      ],
+    );
+  }
 }

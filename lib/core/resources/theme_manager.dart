@@ -78,7 +78,7 @@ ThemeData getApplicationTheme() {
             right: AppPadding.p20,
           ),
         ),
-        overlayColor: WidgetStatePropertyAll(ColorManager.lightPrimary),
+        // overlayColor: WidgetStatePropertyAll(ColorManager.lightPrimary),
         iconColor: WidgetStatePropertyAll(ColorManager.white),
         iconSize: WidgetStatePropertyAll(AppSize.s32),
       ),

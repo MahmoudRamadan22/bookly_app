@@ -1,6 +1,7 @@
 import 'dart:core';
 
 import 'package:bookly/core/resources/strings_manager.dart';
+import 'package:bookly/features/home/presentation/views/book_details_view.dart';
 import 'package:bookly/features/home/presentation/views/home_view.dart';
 import 'package:bookly/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/material.dart';
 class Routes {
   static const String splashRoute = '/';
   static const String homeRoute = '/home';
+  static const String bookDetails = '/bookDetails';
 }
 
 class RouteGenerator {
@@ -17,6 +19,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => SplashView());
       case Routes.homeRoute:
         return MaterialPageRoute(builder: (context) => HomeView());
+      case Routes.bookDetails:
+        return MaterialPageRoute(builder: (context) => BookDetailsView());
       default:
         return undefinedRoute();
     }
