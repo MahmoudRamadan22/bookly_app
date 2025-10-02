@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class CustomItemInListView extends StatelessWidget {
   const CustomItemInListView({super.key});
-
+  // final double aspectRatio;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

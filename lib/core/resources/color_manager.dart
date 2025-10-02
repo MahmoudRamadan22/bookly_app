@@ -8,4 +8,5 @@ class ColorManager {
   static Color black = const Color(0xff010101);
   static Color grey = const Color(0xff696969);
   static Color lightGrey = const Color.fromARGB(242, 212, 211, 211);
+  static Color orange = const Color(0xffF08465);
 }

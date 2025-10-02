@@ -21,16 +21,24 @@ class CustomAppBar {
     );
   }
 
-  AppBar customAppBarForDetailsBookView() {
+  AppBar customAppBarForDetailsBookView(BuildContext context) {
     return AppBar(
       actionsPadding: EdgeInsets.all(AppPadding.p10),
       leading: Padding(
         padding: const EdgeInsets.all(AppPadding.p10),
-        child: IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+        child: IconButton(
+          onPressed: () {
+            // to return  to home view
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.close),
+        ),
       ),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            // to check your cart
+          },
           icon: Icon(Icons.shopping_cart_checkout_rounded),
         ),
       ],

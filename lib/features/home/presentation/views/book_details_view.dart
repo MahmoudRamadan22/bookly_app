@@ -8,7 +8,7 @@ class BookDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar().customAppBarForDetailsBookView(),
+      appBar: CustomAppBar().customAppBarForDetailsBookView(context),
       body: BookDetailsViewBody(),
     );
   }

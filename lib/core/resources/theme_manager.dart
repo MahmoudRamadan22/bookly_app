@@ -66,6 +66,10 @@ ThemeData getApplicationTheme() {
         color: ColorManager.lightGrey,
         fontSize: FontSize.s22,
       ),
+      bodyLarge: getBoldStyle(
+        color: ColorManager.black,
+        fontSize: FontSize.s22 * 1.3,
+      ),
     ),
     // icon button theme
     iconButtonTheme: IconButtonThemeData(
