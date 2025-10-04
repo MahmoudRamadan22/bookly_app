@@ -87,5 +87,19 @@ ThemeData getApplicationTheme() {
         iconSize: WidgetStatePropertyAll(AppSize.s32),
       ),
     ),
+    inputDecorationTheme: InputDecorationThemeData(
+      hintStyle: getBoldStyle(
+        color: ColorManager.orange,
+        fontSize: FontSize.s16,
+      ),
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.white),
+        borderRadius: BorderRadius.circular(AppSize.s10),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.white),
+        borderRadius: BorderRadius.circular(AppSize.s10),
+      ),
+    ),
   );
 }

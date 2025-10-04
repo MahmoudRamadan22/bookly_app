@@ -1,3 +1,4 @@
+import 'package:bookly/core/resources/routes_manager.dart';
 import 'package:bookly/core/resources/values_manager.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/home_body_view.dart';
@@ -9,7 +10,9 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar().getAppBar(),
+      appBar: CustomAppBar().getAppBar(() {
+        Navigator.pushNamed(context, Routes.searchRoute);
+      }),
       body: Padding(
         padding: const EdgeInsets.only(top: AppPadding.p8),
         child: HomeBodyView(),

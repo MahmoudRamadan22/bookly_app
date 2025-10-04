@@ -44,7 +44,7 @@ class BookDetailsViewBody extends StatelessWidget {
               topRightCorner: 0,
             ),
             PriceAndFullPreviewItem(
-              text: "Full Preview",
+              text: "Free Preview",
               color: ColorManager.orange,
               onTab: () {},
               style: Theme.of(context).textTheme.headlineSmall,
