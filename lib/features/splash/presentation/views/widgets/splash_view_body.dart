@@ -51,7 +51,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
             TweenAnimationBuilder(
               tween: ColorTween(
                 begin: ColorManager.white,
-                end: ColorManager.primary,
+                end: ColorManager.orange,
               ),
               duration: Duration(seconds: 2),
               builder: (BuildContext context, Color? value, Widget? child) {
