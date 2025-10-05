@@ -22,7 +22,7 @@ class HomeBodyView extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(AppPadding.p8),
                 child: Text(
-                  AppStrings.bestSeller,
+                  AppStrings.physicsBooks,
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
               ),
