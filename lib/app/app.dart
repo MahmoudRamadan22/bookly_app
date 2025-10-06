@@ -23,7 +23,8 @@ class Bookly extends StatelessWidget {
                 ..fetchProgrammingBooks(),
         ),
         BlocProvider(
-          create: (context) => PhysicsBooksCubit(getIt.get<HomeRepoImpl>()),
+          create: (context) =>
+              PhysicsBooksCubit(getIt.get<HomeRepoImpl>())..fetchPhysicsBooks(),
         ),
       ],
       child: MaterialApp(

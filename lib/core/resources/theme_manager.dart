@@ -52,7 +52,7 @@ ThemeData getApplicationTheme() {
       ),
       headlineSmall: getBoldStyle(
         color: ColorManager.white,
-        fontSize: FontSize.s22 * 1.3,
+        fontSize: FontSize.s22,
       ),
       headlineMedium: getBoldStyle(
         color: ColorManager.white,

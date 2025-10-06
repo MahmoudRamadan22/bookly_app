@@ -1,6 +1,7 @@
 import 'package:bookly/core/resources/color_manager.dart';
 import 'package:bookly/core/resources/constants_manager.dart';
 import 'package:bookly/core/resources/values_manager.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomItemInListView extends StatelessWidget {
@@ -17,7 +18,7 @@ class CustomItemInListView extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppSize.s10),
             color: ColorManager.black,
             image: DecorationImage(
-              image: NetworkImage(image),
+              image: CachedNetworkImageProvider(image),
               fit: BoxFit.fill,
             ),
           ),
