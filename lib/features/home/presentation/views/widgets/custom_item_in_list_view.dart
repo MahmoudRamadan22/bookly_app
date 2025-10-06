@@ -1,12 +1,12 @@
-import 'package:bookly/core/resources/assets_manager.dart';
 import 'package:bookly/core/resources/color_manager.dart';
 import 'package:bookly/core/resources/constants_manager.dart';
 import 'package:bookly/core/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 
 class CustomItemInListView extends StatelessWidget {
-  const CustomItemInListView({super.key});
+  const CustomItemInListView({super.key, required this.image});
   // final double aspectRatio;
+  final String image;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -17,7 +17,7 @@ class CustomItemInListView extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppSize.s10),
             color: ColorManager.black,
             image: DecorationImage(
-              image: AssetImage(ImageAssets.book1),
+              image: NetworkImage(image),
               fit: BoxFit.fill,
             ),
           ),

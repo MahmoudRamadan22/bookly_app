@@ -12,7 +12,7 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetchProgrammingBooks() async {
     try {
       var result = await apiService.get(endPoint: 'volumes?q=programming');
-      List<Map<String, dynamic>> data = result['items'];
+      List<dynamic> data = result['items'] as dynamic;
       List<BookModel> books = [];
       for (var book in data) {
         books.add(BookModel.fromJson(book));

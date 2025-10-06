@@ -64,7 +64,7 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
         ),
         SizedBox(height: 15),
-        BooksListInUpperPart(),
+        ProgrammingBooks(),
       ],
     );
   }

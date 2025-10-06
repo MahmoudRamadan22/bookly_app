@@ -17,7 +17,7 @@ class HomeBodyView extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              BooksListInUpperPart(),
+              ProgrammingBooks(),
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(AppPadding.p8),

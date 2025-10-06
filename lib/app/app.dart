@@ -18,7 +18,9 @@ class Bookly extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => ProgrammingBooksCubit(getIt.get<HomeRepoImpl>()),
+          create: (context) =>
+              ProgrammingBooksCubit(getIt.get<HomeRepoImpl>())
+                ..fetchProgrammingBooks(),
         ),
         BlocProvider(
           create: (context) => PhysicsBooksCubit(getIt.get<HomeRepoImpl>()),
