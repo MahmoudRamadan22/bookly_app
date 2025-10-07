@@ -27,6 +27,7 @@ class PhysicsBooks extends StatelessWidget {
               rating: 4.5,
               title1: books[index].volumeInfo!.title,
               puplisher: books[index].volumeInfo!.publisher,
+              bookUrl: books[index].volumeInfo!.previewLink,
             ),
             itemCount: books.length,
             physics: NeverScrollableScrollPhysics(),

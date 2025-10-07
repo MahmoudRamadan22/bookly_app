@@ -5,6 +5,7 @@ import 'package:bookly/features/home/presentation/views/widgets/details_of_item.
 import 'package:bookly/features/home/presentation/views/widgets/price_and_full_preview_item.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({
@@ -14,12 +15,15 @@ class BookDetailsViewBody extends StatelessWidget {
     required this.pages,
     required this.title,
     required this.publisher,
+    required this.bookUrl,
   });
   final String image;
   final double price;
   final String title;
   final int pages;
   final String publisher;
+  final String bookUrl;
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -65,8 +69,12 @@ class BookDetailsViewBody extends StatelessWidget {
             PriceAndFullPreviewItem(
               text: "Free Preview",
               color: ColorManager.orange,
-              onTab: () {
+              onTab: () async {
                 // to open the book
+                final url = Uri.parse(bookUrl);
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
               },
               style: Theme.of(context).textTheme.headlineSmall,
               bottomLeftCorner: 0,

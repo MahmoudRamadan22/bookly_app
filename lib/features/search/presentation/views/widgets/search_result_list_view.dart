@@ -38,6 +38,8 @@ class SearchResultListView extends StatelessWidget {
                               publisher:
                                   searchedBooks[index].volumeInfo!.publisher,
                               title: searchedBooks[index].volumeInfo!.title,
+                              bookUrl:
+                                  searchedBooks[index].volumeInfo!.previewLink,
                             ),
                       ),
                     );

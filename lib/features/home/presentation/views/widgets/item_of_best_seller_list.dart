@@ -14,6 +14,7 @@ class ItemOfBestSellerList extends StatelessWidget {
     required this.rating,
     required this.title1,
     required this.puplisher,
+    required this.bookUrl,
   });
   final String image;
   final String title1;
@@ -21,6 +22,7 @@ class ItemOfBestSellerList extends StatelessWidget {
   final double price;
   final int nPages;
   final double rating;
+  final String bookUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +40,7 @@ class ItemOfBestSellerList extends StatelessWidget {
                     price: price,
                     publisher: puplisher,
                     title: title1,
+                    bookUrl: bookUrl,
                   ),
             ),
           );

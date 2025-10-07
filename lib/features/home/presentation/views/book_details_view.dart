@@ -10,12 +10,14 @@ class BookDetailsView extends StatelessWidget {
     required this.price,
     required this.publisher,
     required this.title,
+    required this.bookUrl,
   });
   final String title;
   final String publisher;
   final double price;
   final int pages;
   final String image;
+  final String bookUrl;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +28,7 @@ class BookDetailsView extends StatelessWidget {
         pages: pages,
         title: title,
         publisher: publisher,
+        bookUrl: bookUrl,
       ),
     );
   }
