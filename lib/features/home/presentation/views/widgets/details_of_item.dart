@@ -2,8 +2,17 @@ import 'package:bookly/core/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class DetailsOfItem extends StatelessWidget {
-  const DetailsOfItem({super.key});
-
+  const DetailsOfItem({
+    super.key,
+    required this.pages,
+    required this.price,
+    required this.publisher,
+    required this.title,
+  });
+  final String title;
+  final String publisher;
+  final double price;
+  final int pages;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -12,15 +21,16 @@ class DetailsOfItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
+            textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            "يومية",
+            title,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           Text(
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            " يومية",
+            publisher,
             style: Theme.of(context).textTheme.bodySmall,
           ),
           SizedBox(height: 30),
@@ -28,12 +38,12 @@ class DetailsOfItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "19.99 \$",
+                price == 0.0 ? 'Free' : '$price \$ ',
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
               Icon(Icons.star_half_sharp, color: ColorManager.lightPrimary),
-              Text("4.8", style: Theme.of(context).textTheme.headlineMedium),
-              Text("(2390)", style: Theme.of(context).textTheme.bodySmall),
+              Text("4.5", style: Theme.of(context).textTheme.headlineMedium),
+              Text("($pages)", style: Theme.of(context).textTheme.bodySmall),
             ],
           ),
         ],

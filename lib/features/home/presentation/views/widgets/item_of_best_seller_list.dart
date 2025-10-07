@@ -1,7 +1,7 @@
 import 'package:bookly/core/resources/color_manager.dart';
 import 'package:bookly/core/resources/constants_manager.dart';
-import 'package:bookly/core/resources/routes_manager.dart';
 import 'package:bookly/core/resources/values_manager.dart';
+import 'package:bookly/features/home/presentation/views/book_details_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -28,8 +28,19 @@ class ItemOfBestSellerList extends StatelessWidget {
       padding: const EdgeInsets.all(AppPadding.p8),
       child: GestureDetector(
         onTap: () {
-          // go to book details view
-          Navigator.pushNamed(context, Routes.bookDetails);
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  BookDetailsView(
+                    image: image,
+                    pages: nPages,
+                    price: price,
+                    publisher: puplisher,
+                    title: title1,
+                  ),
+            ),
+          );
         },
         child: SizedBox(
           height: MediaQuery.of(context).size.height * .18,
