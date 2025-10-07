@@ -2,8 +2,13 @@ import 'package:bookly/core/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchTextField extends StatelessWidget {
-  const CustomSearchTextField({super.key});
-
+  const CustomSearchTextField({
+    super.key,
+    required this.onChanged,
+    required this.onSubmitted,
+  });
+  final ValueChanged<String>? onChanged;
+  final ValueChanged<String>? onSubmitted;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -12,10 +17,8 @@ class CustomSearchTextField extends StatelessWidget {
         suffixIcon: Icon(Icons.search, color: ColorManager.orange),
       ),
       style: Theme.of(context).textTheme.titleLarge,
-      onSubmitted: (value) {
-        // go to search results
-        Navigator.pop(context);
-      },
+      onChanged: onChanged,
+      onSubmitted: onSubmitted,
     );
   }
 }
